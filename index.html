@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kacau Total</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, #ff0000, #00ff00);
+            animation: spin 5s infinite linear;
+            font-family: 'Courier New', monospace;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        h1 {
+            font-size: 20em;
+            color: purple;
+            text-align: center;
+            animation: bounce 1s infinite alternate;
+        }
+
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50px); }
+        }
+
+        p, h2 {
+            color: orange;
+            font-size: 2em;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        section {
+            background: rgba(255, 255, 255, 0.5);
+            margin: 20px;
+            padding: 10px;
+            border: 5px dashed red;
+            transform: skew(10deg);
+        }
+
+        .field {
+            display: block;
+            margin: 10px;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .field:hover {
+            background: pink;
+            transform: scale(1.1);
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid blue;
+            background: yellow;
+            font-size: 1.5em;
+            color: green;
+        }
+
+        input[type="submit"] {
+            background: black;
+            color: white;
+            font-size: 2em;
+            transition: all 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Selamat Datang di Kekacauan!</h1>
+        <p>Kamu siap untuk bingung?</p>
+    </header>
+    <main>
+        <section>
+            <h2>Mengenal Kacau</h2>
+            <p>Ini adalah tempat di mana segala sesuatu tidak masuk akal!</p>
+        </section>
+        <section>
+            <h2>Bahasa Pemrograman</h2>
+            <ul>
+                <li>???</li>
+                <li>!!JavaScript!!</li>
+                <li>#Python#</li>
+            </ul>
+        </section>
+        <section id="reviews">
+            <h2>Ulasan</h2>
+            <form id="form">
+                <div class="field">
+                    <label for="name">Nama:</label>
+                    <input type="text" id="name">
+                </div>
+                <div class="field">
+                    <label for="review">Ulasan:</label>
+                    <textarea id="review"></textarea>
+                </div>
+                <input type="submit" value="Kirim">
+            </form>
+        </section>
+    </main>
+    <footer style="position: absolute; bottom: 0; width: 100%; text-align: center; color: red;">
+        <p>&copy; 2024 Kekacauan Total!</p>
+    </footer>
+    <script>
+        document.getElementById('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert("Ini sangat kacau!");
+        });
+    </script>
+</body>
+</html>
